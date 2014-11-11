@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+<Resource name="jdbc/twitterontap"
+
+auth="Container"
+
+type="javax.sql.DataSource"
+
+username="admin22N7Ms4"
+
+password="qhwUED8YW7il"
+
+driverClassName="com.mysql.jdbc.Driver"
+
+url="jdbc:mysql://127.7.1.2:3306/twitterontap"
+
+maxActive="15"
+
+maxIdle="3"/>
+
+</Context>
