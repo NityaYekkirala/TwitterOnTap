@@ -50,10 +50,10 @@ public class TwitterManager {
 	                                               * a connection between Twitter4j API and Twitter API */ 
 		cb = new ConfigurationBuilder();
 		cb.setDebugEnabled(true);
-        cb.setOAuthConsumerKey("Zl1CreX4IdOo8L9LeIy3v8AVG");
-        cb.setOAuthConsumerSecret("tLQAGmWf4jf62LPSn4GrpDc9HTE46U0smSdAdL5FvXmw1glhKR");
-        cb.setOAuthAccessToken("2742435007-u5gOESzggSW4Gd1GdhIqGkLQOrW8P9jou1OHHBm");
-        cb.setOAuthAccessTokenSecret("xDjMOVCQzZsfDDt4zrg7GvvAhBusqaoXHrPWxZ4aGEnXz"); 
+        cb.setOAuthConsumerKey("******");
+        cb.setOAuthConsumerSecret("*****");
+        cb.setOAuthAccessToken("*****");
+        cb.setOAuthAccessTokenSecret("*****"); 
         
         twitter = new TwitterFactory(cb.build()).getInstance();
 	}

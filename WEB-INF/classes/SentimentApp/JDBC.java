@@ -21,9 +21,9 @@ public class JDBC {
 		try {
 			// details of the database to be connected to
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			String connectionUrl = "jdbc:mysql://127.7.1.2:3306/twitterontap";
-			String connectionUser = "admin22N7Ms4";
-			String connectionPassword = "qhwUED8YW7il";
+			String connectionUrl = "*****";
+			String connectionUser = "*****";
+			String connectionPassword = "*****";
 			conn = DriverManager.getConnection(connectionUrl, connectionUser, connectionPassword);
 			
 		} catch (Exception e) {
