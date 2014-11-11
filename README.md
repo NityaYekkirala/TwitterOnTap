@@ -2,7 +2,7 @@ TwitterOnTap
 ============
 
 TwitterOnTap is a web-based java tool which grabs tweets from Twitter according to a search word and analyses 
-their sentiment. The application also includes a number of additional features.
+their sentiment. The application also includes a number of additional features. Please go to http://twitterontap-sentimentcody.rhcloud.com/twitterontap/index.html to check this application out.
 
 SYSTEM ARCHITECTURE
 Primarily,  the web application consisted of two major elements; the Java classes which represented the 
