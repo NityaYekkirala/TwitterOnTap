@@ -7,13 +7,13 @@ auth="Container"
 
 type="javax.sql.DataSource"
 
-username="admin22N7Ms4"
+username="*****"
 
-password="qhwUED8YW7il"
+password="*****"
 
 driverClassName="com.mysql.jdbc.Driver"
 
-url="jdbc:mysql://127.7.1.2:3306/twitterontap"
+url="*****"
 
 maxActive="15"
 
