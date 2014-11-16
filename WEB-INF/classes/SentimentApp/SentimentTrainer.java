@@ -35,9 +35,9 @@ public class SentimentTrainer
     public static void trainModel()throws IOException, ClassNotFoundException 
     {
     	// these methods send the collection of positive, negative and neutral training tweets to the necessary directories
-    	CSVreader.CSVrowsToPosFile("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/SandersTwitterCorpus/pos-corpus.csv");
-    	CSVreader.CSVrowsToNegFile("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/SandersTwitterCorpus/neg-corpus.csv");
-    	CSVreader.CSVrowsToNeuFile("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/SandersTwitterCorpus/neu-corpus.csv");
+    	CSVreader.CSVrowsToPosFile("*****");
+    	CSVreader.CSVrowsToNegFile("*****");
+    	CSVreader.CSVrowsToNeuFile("*****");
 		
         // create a file object which will store the files containing the positive, negative and neutral training tweets respectively
         File trainDirectory; 
@@ -45,7 +45,7 @@ public class SentimentTrainer
         // create an LMClassifier object
         LMClassifier classifier;
         // this assigns the file object to the previously created directory which contains three sub-folders; 'pos', 'neg' and 'neutral'
-        trainDirectory = new File("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/TrainingDirectory");
+        trainDirectory = new File("*****");
         categories = trainDirectory.list(); // the array now holds the three folders (it also includes an invisible .DS_Store file
         int nGram = 7; //the nGram level
         classifier = DynamicLMClassifier.createNGramProcess(categories,nGram);
@@ -69,7 +69,7 @@ public class SentimentTrainer
         
         }
         // this compiles the classifier file ('classifier.txt') and sends it to the required local location
-        AbstractExternalizable.compileTo((Compilable) classifier, new File("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/classifier.txt"));
+        AbstractExternalizable.compileTo((Compilable) classifier, new File("*****"));
         }
 
 

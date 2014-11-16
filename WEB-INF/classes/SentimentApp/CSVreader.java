@@ -21,14 +21,14 @@ public class CSVreader {
 	 * the location of the CSV file to read from is supplied as a parameter for this method */
 	public static void CSVrowsToPosFile(String csvLocation) throws IOException {
 		// clears the training directory before each instance of a classifier being trained
-		RedirectSystemOut.clearDirectory("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/TrainingDirectory/pos");
+		RedirectSystemOut.clearDirectory("*****");
 		String posFilename = csvLocation;
 		CSVReader csvReader = new CSVReader(new FileReader(posFilename)); // creates a CSVReader object which will allow manipulation of a csv file
 		String [] row =null;
 		int counter=1;
 		// sends each positive tweet to the "pos" file of the "Training Directory" directory and names it "positiveTweet1, "positiveTweet2". etc...
 		while((row = csvReader.readNext()) != null) {
-		    RedirectSystemOut.appendTextToFile(row[0], "/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/TrainingDirectory/pos/positiveTweet" + counter + ".txt");
+		    RedirectSystemOut.appendTextToFile(row[0], "*****" + counter + ".txt");
 		    counter++;
 		    
 		}
@@ -37,13 +37,13 @@ public class CSVreader {
 	}
 	// this method sends negatively annotated tweets to the necessary directory (within the "Training Directory" directory on the local machine)
 	public static void CSVrowsToNegFile(String csvLocation) throws IOException {
-		RedirectSystemOut.clearDirectory("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/TrainingDirectory/neg");
+		RedirectSystemOut.clearDirectory("*****");
 		String posFilename = csvLocation;
 		CSVReader csvReader = new CSVReader(new FileReader(posFilename));
 		String [] row =null;
 		int counter=1;
 		while((row = csvReader.readNext()) != null) {
-		    RedirectSystemOut.appendTextToFile(row[0], "/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/TrainingDirectory/neg/negativeTweet" + counter + ".txt");
+		    RedirectSystemOut.appendTextToFile(row[0], "*****" + counter + ".txt");
 		    counter++;
 		    
 		}
@@ -51,13 +51,13 @@ public class CSVreader {
 	}
 	// this method sends neutrally annotated tweets to the necessary directory (within the "Training Directory" directory on the local machine)
 	public static void CSVrowsToNeuFile(String csvLocation) throws IOException {
-		RedirectSystemOut.clearDirectory("/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/TrainingDirectory/neu");
+		RedirectSystemOut.clearDirectory("*****");
 		String posFilename = csvLocation;
 		CSVReader csvReader = new CSVReader(new FileReader(posFilename));
 		String [] row =null;
 		int counter=1;
 		while((row = csvReader.readNext()) != null) {
-		    RedirectSystemOut.appendTextToFile(row[0], "/Users/jonathancody/TwitterApp/SentimentAnalysis/SentimentClassifier/TrainingDirectory/neu/neutralTweet" + counter + ".txt");
+		    RedirectSystemOut.appendTextToFile(row[0], "*****" + counter + ".txt");
 		    counter++;
 		    
 		}
