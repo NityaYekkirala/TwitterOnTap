@@ -12,12 +12,12 @@
 <div id="shareHolder">
 Share <br /> <br />
     
-   <a href="https://www.facebook.com/twitterontap?ref=hl" rel="external" title="Facebook page"> <img src="facebook.png" alt="Facebook logo" /> </a> <br /> <br />
+   <a href="https://www.facebook.com" rel="external" title="Facebook page"> <img src="facebook.png" alt="Facebook logo" /> </a> <br /> <br />
    
-   <a href="https://twitter.com/jrcody38" rel="external" title="Twitter page"> <img src="twitter.png" alt="Twitter logo" /> </a> <br /> <br>
+   <a href="https://twitter.com" rel="external" title="Twitter page"> <img src="twitter.png" alt="Twitter logo" /> </a> <br /> <br>
   
     
-   <a href="http://www.pinterest.com/jonathancody38/twitterontap/" rel="external" title=""> <img src="pinterest.png" alt="Pinterest logo" /> </a> <br />
+   <a href="http://www.pinterest.com" rel="external" title=""> <img src="pinterest.png" alt="Pinterest logo" /> </a> <br />
 
 
 </div>
@@ -53,9 +53,7 @@ Share <br /> <br />
    </div> <br />
   
   
-  <p> Welcome to TwitterOnTap! On this site, you can perform some basic sentiment analysis operations. Firstly, you can search a topic on Twitter by providing a keyword to query and then see what the sentiment is towards that topic in the Twitterverse. 
-  Furthermore, you can choose a Twitter topic check what its sentiment history is. Finally you can also  utilize your own personal sentiment analysis tool by providing a sentence  and checking the sentiment that it expresses. 
-  You can find out more about this site on the <a href="about.html" title="About page"> About page </a>. Thanks for checking out TwitterOnTap.</p>
+  <p> Welcome to TwitterOnTap! On this site, you can perform some basic sentiment analysis operations. Firstly, you can search a topic on Twitter by providing a keyword to query and then see what the sentiment is towards that topic in the Twitterverse. You can also choose a Twitter topic and see tweets about that topic stream to you in real time. Furthermore, you can choose a Twitter topic and see how the sentiment towards it has changed over the last 7 days. Finally you can also  utilse your own personal sentiment analysis tool by providing a sentence  and checking the sentiment that it expresses. You can find out more about this site on the <a href="about.html" title="About page"> About page </a>. Thanks for checking out TwitterOnTap.</p>
       
 <br> <br /> 
 
@@ -82,6 +80,18 @@ Share <br /> <br />
  
  <br /> <br />
  
+ <p>Enter your keyword/topic and click "STREAM!" to see positive and negative  (sentiment) tweets relating to your topic stream to the live feed in real time.  </p>
+ 
+ <form action="twitterStream.jsp"  method="post"  name="insertTwitterStreamTopic" >
+ 
+ <input   type="text" placeholder="Enter a topic" name="twitterStreamSentiment" required>
+ 
+ 
+   <input class="button" type="submit" name="Submit2" value="STREAM!">
+   
+ </form>
+ 
+ <br /> <br />
  
  <p>Enter your keyword/topic and click "CHECK HISTORY!" to see how the sentiment towards it has changed over the last 7 days.  </p>
  

@@ -1,6 +1,5 @@
 <>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<%@page import="SentimentApp.SentimentClassifier"%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -34,12 +33,12 @@
 <div id="shareHolder">
 Share <br /> <br />
     
-   <a href="https://www.facebook.com/twitterontap?ref=hl" rel="external" title="Facebook page"> <img src="facebook.png" alt="Facebook logo" /> </a> <br /> <br />
+   <a href="https://www.facebook.com" rel="external" title="Facebook page"> <img src="facebook.png" alt="Facebook logo" /> </a> <br /> <br />
    
-   <a href="https://twitter.com/jrcody38" rel="external" title="Twitter page"> <img src="twitter.png" alt="Twitter logo" /> </a> <br /> <br>
+   <a href="https://twitter.com" rel="external" title="Twitter page"> <img src="twitter.png" alt="Twitter logo" /> </a> <br /> <br>
   
     
-   <a href="http://www.pinterest.com/jonathancody38/twitterontap/" rel="external" title=""> <img src="pinterest.png" alt="Pinterest logo" /> </a> <br />
+   <a href="http://www.pinterest.com" rel="external" title=""> <img src="pinterest.png" alt="Pinterest logo" /> </a> <br />
 
 
 </div>
@@ -76,16 +75,7 @@ Thank you for using TwitterOnTap!. Please see below to check the sentiment of th
       
   </p>
   
-  <% SentimentClassifier.location = getServletContext().getRealPath("/classifier.txt") ;%>
   
-  <%  String query = request.getParameter ("sentenceSentiment"); %> 
-
-  <% out.println ("The Sentiment of the sentence is " + SentimentApp.SentenceSentiment.analyseSentence(query) + "."); %>
-
-  <br> <br>
-
-SENTENCE: <br>
-  <%= request.getParameter ("sentenceSentiment")  %>
   
   </div>
   

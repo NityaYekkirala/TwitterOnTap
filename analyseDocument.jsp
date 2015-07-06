@@ -1,24 +1,6 @@
 <>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<%@page import="SentimentApp.SentimentClassifier"%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page import="org.apache.commons.fileupload.FileItemFactory" %>
-<%@ page import="org.apache.commons.fileupload.FileItem" %>
-<%@ page import="org.apache.commons.fileupload.servlet.ServletFileUpload" %>
-<%@ page import="org.apache.commons.fileupload.disk.DiskFileItemFactory" %>
-<%@ page import="SentimentApp.RedirectSystemOut" %>
-<%@ page import="SentimentApp.DocumentSentiment" %>
-<%@ page import="SentimentApp.JFreeChart" %>
-<%@ page import="org.jfree.chart.ChartUtilities" %>
-<%@ page import="org.jfree.chart.*" %>
-<%@ page import="org.jfree.data.general.*" %>
-<%@ page import="org.jfree.chart.ChartRenderingInfo" %>
-<%@ page import="org.jfree.chart.entity.StandardEntityCollection" %>
-<%@ page trimDirectiveWhitespaces="true" %>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -51,12 +33,12 @@
 <div id="shareHolder">
 Share <br /> <br />
     
-   <a href="https://www.facebook.com/twitterontap?ref=hl" rel="external" title="Facebook page"> <img src="facebook.png" alt="Facebook logo" /> </a> <br /> <br />
+   <a href="https://www.facebook.com" rel="external" title="Facebook page"> <img src="facebook.png" alt="Facebook logo" /> </a> <br /> <br />
    
-   <a href="https://twitter.com/jrcody38" rel="external" title="Twitter page"> <img src="twitter.png" alt="Twitter logo" /> </a> <br /> <br>
+   <a href="https://twitter.com" rel="external" title="Twitter page"> <img src="twitter.png" alt="Twitter logo" /> </a> <br /> <br>
   
     
-   <a href="http://www.pinterest.com/jonathancody38/twitterontap/" rel="external" title=""> <img src="pinterest.png" alt="Pinterest logo" /> </a> <br />
+   <a href="http://www.pinterest.com" rel="external" title=""> <img src="pinterest.png" alt="Pinterest logo" /> </a> <br />
 
 
 </div>
@@ -92,68 +74,6 @@ Share <br /> <br />
 Thank you for using TwitterOnTap!. Please see below to check the  to check the distribution of sentiment accross the content of the .txt file you submitted. You can click <a href="index.html"   title="Home page" > here </a> to return to the homepage.
       
   </p>
-  
-  <% SentimentClassifier.location = getServletContext().getRealPath("/classifier.txt"); %>
-  
-  <%  String file = request.getParameter ("documentSentiment"); 
-      DocumentSentiment example = new DocumentSentiment();  
-		
-  %> 
-  
-  <%
-
- boolean isMultipart = ServletFileUpload.isMultipartContent(request);
- String content="";
-
- if(isMultipart) 
-     {
-        FileItemFactory factory = new DiskFileItemFactory();
-        ServletFileUpload upload = new ServletFileUpload(factory);
-        List items = upload.parseRequest(request);
-
-        Iterator iter = items.iterator();
-        while (iter.hasNext()) 
-         {
-            FileItem item = (FileItem) iter.next();
-            if(!item.isFormField()) 
-              {
-                 BufferedInputStream buff=new BufferedInputStream(item.getInputStream());
-                 byte []bytes=new byte[buff.available()];
-                 buff.read(bytes,0,bytes.length);
-                 content=new String(bytes);
-              }
-          }
-     }
- final File file2 = new File(getServletContext().getRealPath(".") + "/mytext.txt");
- SentimentApp.RedirectSystemOut.writeTextToFile(content, file2);
- 
-out.println(example.returnDocumentSentiment(file2)); 
-
-%>
-
-<br> </br>
-
-<%
-
-int pos= example.toReturnPos;
-int neg= example.toReturnNeg;
-int neu= example.toReturnNeu;
-
-org.jfree.chart.JFreeChart chart = JFreeChart.generateBarChart(pos, neg, neu);
-
-try {
-	 final ChartRenderingInfo info = new ChartRenderingInfo(new StandardEntityCollection());
-	 
-	 final File file3 = new File(request.getServletContext().getRealPath(".") + "/barchart.png");
-			  ChartUtilities.saveChartAsPNG(
-			   file3, chart, 600, 400, info);
-			  } catch (Exception e) {
-			  out.println(e);
-			  }
-%>
-  
-  
-  <img src="barchart.png" width="500px" height="300px" />
   
   
   
