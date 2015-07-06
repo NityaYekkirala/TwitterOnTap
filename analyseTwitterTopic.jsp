@@ -7,7 +7,7 @@
 <title>Twitter Sentiment Analysis</title>
 <link rel="stylesheet" href="main.css" />
 
-<style> 
+<style>  
 
 #wrapper {
 	background-color:#FFF;
@@ -16,14 +16,12 @@
 	width:850px;
 	margin:0 auto;
 	text-align:left;
-	height: 950px;
+	height: 1300px;
 	padding:10px;
 	
 	
 	
 }
-
-
 
 </style>
 </head>
@@ -43,10 +41,10 @@ Share <br /> <br />
 
 </div>
 
-
 <div id="wrapper" >
 
 <div id="header1"></div>
+
 
 <div id="navbar">
 
@@ -64,22 +62,30 @@ Share <br /> <br />
           <li> <a href="citations.html" title="Citations page"> CITATIONS </a>
           </li>
           
-          </ul>
+           </ul>
           
           
   </nav> </div>
   
   <p>
   
-Thank you for using TwitterOnTap!. Please see below to check the sentiment of the sentence that you supplied. You can click <a href="index.html"   title="Home page" > here </a> to return to the homepage.
+Thank you for using TwitterOnTap! Please see below for a break down of the current Twitter sentiment towards your choosen topic. You can click <a href="index.html"   title="Home page" > here </a> to return to the homepage.
       
   </p>
   
   
-  
-  </div>
+
+<div id="posHolder"> <h2> POSITIVE TWEETS </h2>  
+ </div>
+<div id="negHolder"><h2> NEGATIVE TWEETS </h2> 
+ </div>
+
+
+
+</div>
   
   <br> <br>
+  
   
   <div id="footer">
 
@@ -89,11 +95,10 @@ Thank you for using TwitterOnTap!. Please see below to check the sentiment of th
 
 <a href="https://twitter.com" title="Twitter homepage" > <img src="twitter2.png" hspace="20" align="right" alt="Twitter logo" width="150" height="50"/></a>
 
-  <a href="index.html" title="Home page">  Home </a>  | <a href="about.html" title="About page" > About </a> | <a href="testing.jsp" title="Testing page" >Testing </a> | <a href="citations.html" title="Citations page" > Citations </a> <br /> 
+ <a href="index.html" title="Home page">  Home </a>  | <a href="about.html" title="About page" > About </a> | <a href="testing.jsp" title="Testing page" >Testing </a> | <a href="citations.html" title="Citations page" > Citations </a> <br /> 
 
 
 </div>
-
 
 </body>
 </html>
