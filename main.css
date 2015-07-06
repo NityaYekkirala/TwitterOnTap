@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	
+	color:#000;
+	background-image: url(background.jpeg);
+	font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+	font-size:18px;
+	
+ }
+ 
+ h1 {
+	 text-align:center;
+	 text-decoration: underline;
+	 color:7534AA;
+ }
+ 
+p a:hover {
+	text-decoration: underline;
+	background-color:B484DA;
+	
+	
+}
+ 
+ #shareHolder { position:fixed;
+                height:170px;
+				width:30px;
+				left: 0;
+				top:20%;
+				background-color:#999;
+				font-size:12px;
+				border-style: groove;
+	 
+ }
+ 
+ #shareHolder img:hover {
+background-color:#FFF;
+	 
+ }
+
+#wrapper {
+	background-color:#FFF;
+	border-color:7534AA;
+	border-style:groove;
+	width:850px;
+	margin:0 auto;
+	text-align:left;
+	height: 1550px;
+	padding:11px;
+	
+	
+	
+}
+
+
+#footer {
+	position:static;
+	width:850px;
+	background-color:#000;
+	margin:0 auto;
+	text-align:left;
+	height: 140px;
+	padding:10px;
+	border-color:7534AA;
+	border-style:groove;
+	font-size:14px;
+	text-align:center;
+	color:#FFF;
+	
+}
+
+#footer a {
+	text-decoration:none;
+	color:#00F;
+	
+}
+
+#footer a:hover {
+	text-decoration: underline;
+	background-color:B484DA;
+	 
+}
+
+#header1 {
+	height: 140px;
+	width: 850px;
+	left: 15px;
+	font-size:24px;
+	background-image: url(title.png);
+	
+}
+
+
+
+#navbar{
+	position:static;
+	height: 50px;
+	width: 829px;
+	border: 1px dotted blue;
+    margin: 5px;
+   padding: 5px;
+   background-color:7534AA;
+   
+   
+    
+}
+
+
+#navbar li{
+	 list-style: none;
+     margin: 5px;
+	 padding:5px;
+	 display:inline;
+	font-size: 20px;
+    text-transform: uppercase;
+	background-color:7534AA;
+	
+	
+}
+
+#navbar ul {
+	height:auto;
+	padding: 0px 10px;
+	margin:0px;
+	text-align: center;
+	
+}
+
+#navbar a {
+	text-decoration:none;
+	color:#FFF;
+	
+	}
+	
+#navbar a:hover {
+	text-decoration: underline;
+	background-color:B484DA;
+	 
+}
+	
+
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+	
+	
+
+
+
+.button {
+                
+                padding:6px 15px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+
+#posHolder { 
+	position:relative;
+	padding:5px;
+	border-color:#000;
+	height:1150px;
+	width:300px;
+	background-image:url(pos.jpg);
+	font-size:10px;
+	left:65px;
+	
+	
+}
+
+#posHolder h2 {
+	font-size:16px;
+	
+}
+
+#negHolder {
+	position:relative;
+	padding:5px;
+	left:450px;
+	border-color:#000;
+	height:1150px;
+	width:300px;
+	top:-1160px;
+	background-image:url(neg.jpeg);
+	font-size:10px;
+}
+
+#negHolder h2 {
+	font-size:16px;
+	
+}
+
+
+
+
+
+
+
+
+
+
