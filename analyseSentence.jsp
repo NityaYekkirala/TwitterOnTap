@@ -1,5 +1,6 @@
 <>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@page import="SentimentApp.SentimentClassifier"%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -75,7 +76,16 @@ Thank you for using TwitterOnTap!. Please see below to check the sentiment of th
       
   </p>
   
+  <% SentimentClassifier.location = getServletContext().getRealPath("/classifier.txt") ;%>
   
+  <%  String query = request.getParameter ("sentenceSentiment"); %> 
+
+  <% out.println ("The Sentiment of the sentence is " + SentimentApp.SentenceSentiment.analyseSentence(query) + "."); %>
+
+  <br> <br>
+
+SENTENCE: <br>
+  <%= request.getParameter ("sentenceSentiment")  %>
   
   </div>
   

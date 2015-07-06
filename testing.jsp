@@ -1,6 +1,7 @@
 <>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -43,6 +44,7 @@ Share <br /> <br />
 
 </div>
 
+
 <div id="wrapper" >  
 
 
@@ -74,10 +76,11 @@ Share <br /> <br />
 
   <h1> TESTING THE SENTIMENT ANALYSIS APPLICATION </h1>
   
+  
   <p>In order to test the accuracy of the Sentiment Analysis tool, it needed to be implemented on a test set of tweets. This test set consisted of a number of tweets hosted on the UCD server (click <a href="http://csserver.ucd.ie/~tosull/text.html" title="UCD tweet collection page"> here </a> to view the tweets). These tweets were saved to a .txt file and then analysed with the Sentiment Analysis application. The results of the analysis can be seen below.</p>
   <br /> <br />
   
-  <img src="testimage.jpeg" align="middle" hspace="100" alt="UCD Tweet Testing Results" width="614" height="432" />
+  <img src="UCDtweets.png" align="middle"  alt="UCD Tweet Testing Results" width="450" height="350" />
   ]
   <br /> <br /> <br />
   
@@ -86,9 +89,9 @@ Share <br /> <br />
 
 <br />
   
-   <form action="analyseDocument.jsp"  method="post"  name="uploadFile" >
+   <form action="analyseDocument.jsp"  method="post"  name="uploadFile" enctype="multipart/form-data" >
  
- <input   type="file"  name="documentTweetsSentiment" required>
+ <input   type="file"  name="documentSentiment" required>
  
    <input class="button" type="submit" name="Submit5" value="GO!">
    <br>

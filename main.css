@@ -162,7 +162,7 @@ img.displayed {
 	position:relative;
 	padding:5px;
 	border-color:#000;
-	height:550px;
+	height:1150px;
 	width:300px;
 	background-image:url(pos.jpg);
 	font-size:10px;
@@ -181,9 +181,9 @@ img.displayed {
 	padding:5px;
 	left:450px;
 	border-color:#000;
-	height:550px;
+	height:1150px;
 	width:300px;
-	top:-560px;
+	top:-1160px;
 	background-image:url(neg.jpeg);
 	font-size:10px;
 }
